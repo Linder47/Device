@@ -1,0 +1,33 @@
+.popular__wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+}
+
+.popular__item {
+    width: 160px;
+    margin: 0 20px;
+    position: relative;
+    height: 250px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 160px;
+        height: 160px;
+        background-color: @color-yellow;
+        top: 0;
+        left: 0;
+    }
+}

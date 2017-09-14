@@ -1,0 +1,91 @@
+.main-nav {
+    margin-top: 31px;
+}
+
+.main-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    margin-top: -3px;
+    padding-left: 0;
+    letter-spacing: 3.5px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        color: @main-nav-hover;
+    }
+
+    &:active {
+        color: @main-nav-active;
+    }
+}
+
+.main-nav__item--magazine {
+    width: 300px;
+    margin-right: 220px;
+    cursor: pointer;
+}
+
+.main-nav__item--cross {
+    position: relative;
+
+    &::after,
+    &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: @navigation-active;
+    top: 15px;
+    right: 53px;
+    }
+
+    &::before {
+        transform: rotate(90deg);
+    }
+}
+
+    .main-nav__item--cross:hover::before,
+    .main-nav__item--cross:hover::after {
+        background-color: @cross-hover;
+    }
+
+    .main-nav__item--cross:active::before,
+    .main-nav__item--cross:active::after {
+        background-color: @cross-active;
+    }
+
+.main-nav__item--delivery {
+    margin-left: 20px;
+    width: 160px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 7px;
+        background-color: #fff;
+        top: 116px;
+        left: 0;
+    }
+}
+
+.main-nav__item--warranty {
+    width: 140px;
+}
+
+.main-nav__item--contacts {
+    margin-left: 80px;
+}

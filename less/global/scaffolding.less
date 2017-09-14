@@ -1,0 +1,64 @@
+.container {
+    width: 1160px;
+    margin: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    font-size: 15px;
+    line-height: 36px;
+    font-family: "OpenSans Light", "Arial", sans-serif;
+    color: @color-navigation;
+}
+
+::-webkit-input-placeholder {
+  color: @navigation-active;
+}
+
+:hover::-webkit-input-placeholder {
+    color: @navigation-hover;
+}
+
+:focus::-webkit-input-placeholder {
+    color: @color-navigation
+}
+
+::-moz-placeholder {
+  color: @navigation-active;
+}
+
+:hover::-moz-placeholder {
+    color: @navigation-hover;
+}
+
+:focus::-moz-placeholder {
+    color: @color-navigation
+}
+
+:-moz-placeholder {
+  color: @navigation-active;
+}
+
+:hover:-moz-placeholder {
+    color: @navigation-hover;
+}
+
+:focus:-moz-placeholder {
+    color: @color-navigation
+}
+
+:-ms-input-placeholder {
+  color: @navigation-active;
+}
+
+:hover:-ms-input-placeholder {
+    color: @navigation-hover;
+}
+
+:focus:-ms-input-placeholder {
+    color: @color-navigation
+}
