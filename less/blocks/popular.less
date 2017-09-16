@@ -6,11 +6,32 @@
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
 }
 
+/*.popular__item__wrapper {
+    cursor: pointer;
+    width: 160px;
+    margin: 0 20px;
+    height: 250px;
+    position: relative;
+}
+*/
+
+.popular__link {
+    height: 250px;
+    position: absolute;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
 .popular__item {
     width: 160px;
     margin: 0 20px;
     position: relative;
     height: 250px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
     &:first-child {
         margin-left: 0;
@@ -19,15 +40,74 @@
     &:last-child {
         margin-right: 0;
     }
+}
 
-    &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 160px;
-        height: 160px;
-        background-color: @color-yellow;
-        top: 0;
-        left: 0;
-    }
+.popular__item img {
+    margin: auto;
+    padding: 0;
+}
+
+.popular__text {
+    top: 195px;
+    position: absolute;
+    letter-spacing: .3px;
+    line-height: 21px;
+    color: #000;
+    text-decoration: none;
+}
+
+.popular__text a {
+    margin: 0;
+}
+
+.popular__item__wrapper:first-child {
+    margin-left: 0;
+}
+
+.popular__item:hover  .popular__img-wrapper{
+    background-color: @color-yellow-hover; 
+}
+
+.popular__item:active  .popular__text,
+.popular__item:active  .popular__img-wrapper img
+ {
+    opacity: .3;
+}
+
+.popular__img-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 160px;
+    background-color: @color-yellow;
+}
+
+.popular__item--virtual img {
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+.popular__item--monopods img {
+    margin-bottom: 0;
+    padding-left: 2px;
+}
+
+.popular__item--action img {
+    padding-left: 9px;
+    padding-top: 2px;
+}
+
+.popular__item--fitness img {
+    padding-top: 4px;
+    padding-left: 2px;
+}
+
+.popular__item--watch img {
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+.popular__item--quadrocopter img {
+    padding-right: 2px;
+    padding-top: 6px;
 }

@@ -1,0 +1,91 @@
+.services {
+    margin-top: 50px;
+    //background-color: @color-grey;
+    background-color: #dad;
+    height: 288px;
+    margin-top: 172px;
+}
+
+.services__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.services__navigation {
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 319px;
+        right: -7px;
+        top: -100px;
+        background-color: #f6f;
+    }
+}
+
+.services__item {
+    font-size: 18px;
+    font-family: "Gilroy ExtraBold";
+    font-weight: 800;
+    text-transform: uppercase;
+
+    margin-top: -20px;
+    padding-left: 23px;
+    letter-spacing: 3.8px;
+    line-height: 40px;
+    margin-bottom: 44px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        color: #000;
+        height: 8px;
+        background-color: rgb(62, 190, 62);
+        width: 160px;
+        top: 16px;
+        left: -0px;
+        z-index: 10;
+        display: flex;
+    }
+
+    &:active {
+        color: @color-yellow;
+        background-color: #000;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.services__item:hover::after {
+    width: 160px;
+    transition: background-color .2s ease-in-out;
+}
+
+.services__item--delivery {
+    &:active {
+        .warranty,
+        .credit {
+            display: none;
+        }
+    }
+}
+
+.services__item--warranty {
+    padding-left: 28px;
+}
+
+.services__item--credit {
+    margin-top: -19px;
+    padding-left: 42px;
+}
