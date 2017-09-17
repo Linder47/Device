@@ -1,9 +1,52 @@
 .services {
     margin-top: 50px;
-    //background-color: @color-grey;
-    background-color: #dad;
+    background-color: @color-grey;
     height: 288px;
     margin-top: 172px;
+
+    &__content {
+        display: none;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -263px;
+            top: 50px;
+            height: 164px;
+            width: 136px;
+            background-repeat: no-repeat;
+        }
+
+        &--delivery::after {
+            background-image: url("../img/delivery.png");
+        }
+
+        &--warranty::after {
+            background-image: url("../img/warranty.png");
+            top: 25px;
+            width: 171px;
+            height: 195px;
+            right: -283px;
+        }
+
+        &--credit::after {
+            background-image: url("../img/credit.png");
+            top: 25px;
+            width: 156px;
+            height: 188px;
+            right: -259px;
+        }
+    }
+
+    &__radio--delivery:checked ~ &__content--delivery,
+    &__radio--warranty:checked ~ &__content--warranty,
+    &__radio--credit:checked ~ &__content--credit {
+        display: flex;
+        flex-direction: column;
+        margin-left: 121px;
+        margin-top: -65px;
+    }
 }
 
 .services__wrapper {
@@ -11,8 +54,12 @@
     flex-direction: row;
 }
 
+.services__radio {
+    display: none;
+}
+
 .services__navigation {
-    width: 348px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -22,9 +69,9 @@
         position: absolute;
         width: 7px;
         height: 319px;
-        right: -7px;
+        right: -4px;
         top: -100px;
-        background-color: #f6f;
+        background-color: #000;
     }
 }
 
@@ -41,51 +88,69 @@
     margin-bottom: 44px;
     position: relative;
     cursor: pointer;
-    z-index: 1;
-    display: flex;
+    z-index: 3;
+   width: 255px;
 
     &::after {
         content: "";
         position: absolute;
         color: #000;
         height: 8px;
-        background-color: rgb(62, 190, 62);
+        background-color: @color-yellow-hover;
         width: 160px;
         top: 16px;
         left: -0px;
-        z-index: 10;
-        display: flex;
+        z-index: 2;
     }
 
-    &:active {
+    &:hover::after {
+        width: 160px;
+        height: 40px;
+        margin-top: -16px;
+        transition: height .5s ease-out 0ms;
+    }
+    
+    &--warranty {
+        padding-left: 28px;
+        width: 252px;
+    }
+    
+    &--credit {
+        margin-top: -19px;
+        padding-left: 42px;
+        width: 238px;
+    }
+}
+
+.services__item b {
+    position: relative;
+    z-index: 3;
+}
+
+.services__radio--delivery:checked ~ .services__navigation  .services__item--delivery,
+.services__radio--warranty:checked ~ .services__navigation  .services__item--warranty,
+.services__radio--credit:checked ~ .services__navigation  .services__item--credit {
         color: @color-yellow;
         background-color: #000;
-
-        &::after {
-            display: none;
-        }
     }
+
+.services__radio--delivery:checked ~ .services__navigation  .services__item--delivery::after,
+.services__radio--warranty:checked ~ .services__navigation  .services__item--warranty::after,
+.services__radio--credit:checked ~ .services__navigation  .services__item--credit::after {
+        display: none;
 }
 
-.services__item:hover::after {
-    width: 160px;
-    transition: background-color .2s ease-in-out;
+.services__title {
+    font-size: 47px;
+    font-family: "Gilroy ExtraBold";
+    letter-spacing: 0.9px;
+    margin-bottom: 25px;
 }
 
-.services__item--delivery {
-    &:active {
-        .warranty,
-        .credit {
-            display: none;
-        }
-    }
-}
-
-.services__item--warranty {
-    padding-left: 28px;
-}
-
-.services__item--credit {
-    margin-top: -19px;
-    padding-left: 42px;
+.services__text {
+    font-size: 15px;
+    font-weight: 30px;
+    font-family: "OpenSans Light";
+    width: 430px;
+    letter-spacing: -0.55px;
 }

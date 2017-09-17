@@ -45,18 +45,18 @@
                     <li class="main-nav__item  main-nav__item--contacts"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <!--<div class="catalog-menu">
-            <div class="catalog-menu__wrapper">
-                <ul class="catalog-menu__list">
-                    <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
-                    <li class="catalog-menu__item"><a href="#">Моноподы для селфи</a></li>
-                    <li class="catalog-menu__item"><a href="#">Экшн-камеры</a></li>
-                    <li class="catalog-menu__item"><a href="#">Фитнесс-браслеты</a></li>
-                    <li class="catalog-menu__item"><a href="#">Умные часы</a></li>
-                    <li class="catalog-menu__item"><a href="#">Квадрокоптеры</a></li>
-                </ul>
+            <div class="catalog-menu">
+                <div class="catalog-menu__wrapper">
+                    <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
+                        <li class="catalog-menu__item"><a href="#">Моноподы для селфи</a></li>
+                        <li class="catalog-menu__item"><a href="#">Экшн-камеры</a></li>
+                        <li class="catalog-menu__item"><a href="#">Фитнесс-браслеты</a></li>
+                        <li class="catalog-menu__item"><a href="#">Умные часы</a></li>
+                        <li class="catalog-menu__item"><a href="#">Квадрокоптеры</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>-->
         </header>
 
         <div class="slider  container"></div>
@@ -104,102 +104,118 @@
 
         <div class="services">
             <div class="services__wrapper  container">
-            <div class="services__navigation">
-                <b class="services__item  services__item--delivery">Доставка</b>
-                <b class="services__item  services__item--warranty">Гарантия</b>
-                <b class="services__item  services__item--credit">Кредит</b>
-            </div>
-            <div class="services__content-wrapper">
-                <div class="delivery">
-                    <h3 class="services__title">Доставка</h3>
-                    <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-                        поднимая его на ваш этаж.</p>
+                <!--<div class="services__radio-wrapper">-->
+                <input class="services__radio  services__radio--delivery" type="radio" name="services__radio" id="services__radio-1" checked>
+                <input class="services__radio  services__radio--warranty" type="radio" name="services__radio" id="services__radio-2">
+                <input class="services__radio  services__radio--credit" type="radio" name="services__radio" id="services__radio-3">
+                <!--</div>-->
+                <div class="services__navigation">
+                    <label class="services__item  services__item--delivery" for="services__radio-1"><b>Доставка</b></label>
+                    <label class="services__item  services__item--warranty" for="services__radio-2"><b>Гарантия</b></label>
+                    <label class="services__item  services__item--credit" for="services__radio-3"><b>Кредит</b></label>
                 </div>
-                <div class="warranty">
+                <!--<div class="services__content-wrapper">-->
+                <div class="services__content  services__content--delivery">
+                    <h3 class="services__title">Доставка</h3>
+                    <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br>                        заработаем, поднимая его на ваш этаж.</p>
+                </div>
+                <div class="services__content  services__content--warranty">
                     <h3 class="services__title">Гарантия</h3>
-                    <p class="services__text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар,
+                    <p class="services__text">Если из-за возгарания купленного у нас товара у вас сгорит<br> дом — не переживайте, мы выдадим вам новый.<br>Товар,
                         не дом, конечно же.</p>
                 </div>
-                <div class="credit">
+                <div class="services__content  services__content--credit">
                     <h3 class="services__title">Кредит</h3>
-                    <p class="services__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия
+                    <p class="services__text">Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br>условия
                         кредита. Выгодные для нашего банка, разумеется.</p>
                 </div>
+                <!--</div>-->
             </div>
         </div>
-    </div>
 
-    <div class="logotypes  container">
-        <div class="logotypes__logo-1"></div>
-        <div class="logotypes__logo-2"></div>
-        <div class="logotypes__logo-3"></div>
-        <div class="logotypes__logo-4"></div>
-    </div>
-
-    <div class="info-contacts  container">
-        <div class="info">
-            <h3 class="info-contacts__title">О нас</h3>
-            <p class="info-contacts__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p class="info-contacts__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-            <ul class="info-contacts__list">
-                <li class="info-contacts__item">Деловые Линии</li>
-                <li class="info-contacts__item">Автотрейдинг</li>
-                <li class="info-contacts__item">ЖелДорЭкспедиция</li>
-            </ul>
-            <button class="btn">Подробнее о нас</button>
-        </div>
-        <div class="contacts">
-            <h3 class="info-contacts__title">Контакты</h3>
-            <p class="info-contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
-                бывает.
-            </p>
-            <div class="map"></div>
-            <button class="btn">Напишите нам</button>
-        </div>
-    </div>
-
-    <footer class="page-footer  container">
-        <div class="logo-navigation__wrapper">
-            <div class="logo  logo--page-footer"></div>
-            <div class="navigation  navigation--page-footer">
-                <ul class="navigation__list  navigation__list--page-footer">
-                    <li class="navigation__item  navigation__item--page-footer"><a href="#">Войти</a></li>
-                    <li class="navigation__item  navigation__item--page-footer"><a href="#">Сравнить</a></li>
-                    <li class="navigation__item  navigation__item--page-footer"><a href="#">Корзина</a></li>
-                </ul>
+        <div class="logotypes  container">
+            <div class="logotypes__logo  logotypes__logo-1">
+                <img srcset="img/logo-1.png 1x, img/logo-1@2x.png 2x" alt="logo-1">
+            </div>
+            <div class="logotypes__logo  logotypes__logo-2">
+                <img srcset="img/logo-2.png 1x, img/logo-2@2x.png 2x" alt="logo-2">
+            </div>
+            <div class="logotypes__logo  logotypes__logo-3">
+                <img srcset="img/logo-3.png 1x, img/logo-3@2x.png 2x" alt="logo-3">
+            </div>
+            <div class="logotypes__logo  logotypes__logo-4">
+                <img srcset="img/logo-4.png 1x, img/logo-4@2x.png 2x" alt="logo-4">
             </div>
         </div>
-        <div class="main-nav__wrapper">
-            <p class="page-footer__main-nav-text">г. Москва, ул. Строителей, 15</p>
-            <nav class="main-nav  main-nav--page-footer">
-                <ul class="main-nav__list  main-nav__list--page-footer">
-                    <li class="main-nav__item"><a href="#">Доставка</a></li>
-                    <li class="main-nav__item"><a href="#">Гарантия</a></li>
-                    <li class="main-nav__item"><a href="#">Контакты</a></li>
+
+        <div class="info-contacts  container">
+            <div class="info">
+                <h3 class="info-contacts__title">О нас</h3>
+                <p class="info-contacts__text">Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+                <p class="info-contacts__text">Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными
+                    компаниями:
+                </p>
+                <ul class="info-contacts__list">
+                    <li class="info-contacts__item">Деловые Линии</li>
+                    <li class="info-contacts__item">Автотрейдинг</li>
+                    <li class="info-contacts__item">ЖелДорЭкспедиция</li>
                 </ul>
-            </nav>
-            <p class="page-footer__main-nav-text">Тел.: +7 (495) 495-95-95</p>
+                <button class="btn  btn--info-contacts"><b>Подробнее о нас</b></button>
+            </div>
+            <div class="contacts">
+                <h3 class="info-contacts__title">Контакты</h3>
+                <p class="info-contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки.
+                    Всякое бывает.
+                </p>
+                <div class="map"></div>
+                <button class="btn  btn--info-contacts"><b>Напишите нам</b></button>
+            </div>
         </div>
-        <div class="social__wrapper">
-            <div class="social__line"></div>
-            <div class="social__social-links">
-                <a class="social-link social-link__fb" href="#">FB
+
+        <footer class="page-footer">
+            <div class="page-footer__wrapper  container">
+                <div class="logo-navigation__wrapper">
+                    <div class="logo  logo--page-footer"></div>
+                    <div class="navigation  navigation--page-footer">
+                        <ul class="navigation__list  navigation__list--page-footer">
+                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Войти</a></li>
+                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Сравнить</a></li>
+                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Корзина</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-nav__wrapper">
+                    <p class="page-footer__main-nav-text">г. Москва, ул. Строителей, 15</p>
+                    <nav class="main-nav  main-nav--page-footer">
+                        <ul class="main-nav__list  main-nav__list--page-footer">
+                            <li class="main-nav__item"><a href="#">Доставка</a></li>
+                            <li class="main-nav__item"><a href="#">Гарантия</a></li>
+                            <li class="main-nav__item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <p class="page-footer__main-nav-text">Тел.: +7 (495) 495-95-95</p>
+                </div>
+                <div class="social__wrapper">
+                    <div class="social__line"></div>
+                    <div class="social__social-links">
+                        <a class="social-link social-link__fb" href="#">FB
                                     <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
                                 </a>
-                <a class="social-link social-link__instagram" href="#">INSTAGRAM
+                        <a class="social-link social-link__instagram" href="#">INSTAGRAM
                                     <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use></svg>
                                 </a>
-                <a class="social-link social-link__twitter" href="#">TWITTER
+                        <a class="social-link social-link__twitter" href="#">TWITTER
                                     <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
                                 </a>
-            </div>
-            <div class="social__copyright-link">
-                <a class="page-footer__copyright-link" href="#">html-academy
+                    </div>
+                    <div class="social__copyright-link">
+                        <a class="page-footer__copyright-link" href="#">html-academy
                                     <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
                                 </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     </div>
 </body>
 

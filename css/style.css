@@ -407,10 +407,6 @@ body {
 }
 @font-face {
   font-family: "OpenSans Light";
-  src: url(/fonts/opensanslight.woff);
-}
-@font-face {
-  font-family: "OpenSans Light";
   src: url(/fonts/opensanslight.woff2);
 }
 @font-face {
@@ -669,6 +665,13 @@ input[type="text"] {
   background-color: #f7e296;
   position: relative;
 }
+/*.catalog-menu__wrapper {
+    display: none;
+}
+
+.main-nav__item--magazine:hover ~ .catalog-menu__wrapper {
+    display: block;
+}*/
 .catalog-menu__list {
   margin: 0;
   padding: 0;
@@ -710,6 +713,10 @@ input[type="text"] {
 .catalog-menu__list a:active {
   color: #b8a974;
 }
+.btn {
+  outline: none;
+  cursor: pointer;
+}
 .btn-search {
   display: inline-block;
   margin-top: 0;
@@ -725,7 +732,6 @@ input[type="text"] {
   line-height: 35px;
   font-family: "OpenSans Light", "Arial", sans-serif;
   text-decoration: none;
-  font-weight: 700;
   text-align: center;
   outline: none;
   cursor: pointer;
@@ -738,6 +744,53 @@ input[type="text"] {
 .btn-search:active {
   display: inline-block;
   color: #4d4d4d;
+}
+.btn--info-contacts {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 4px;
+  width: 260px;
+  height: 40px;
+  color: #000;
+  border: transparent;
+  padding-left: 6px;
+  margin-left: -4px;
+  font-size: 18px;
+  line-height: 35px;
+  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  position: relative;
+  letter-spacing: 3.8px;
+  margin-top: 42px;
+  margin-left: 0;
+}
+.btn--info-contacts::after {
+  content: "";
+  position: absolute;
+  color: #000;
+  height: 8px;
+  background-color: #f0c52e;
+  width: 260px;
+  top: 16px;
+  left: 0px;
+  z-index: 2;
+}
+.btn--info-contacts:hover::after {
+  width: 260px;
+  height: 40px;
+  margin-top: -16px;
+  transition: height 0.5s ease-out 0ms;
+  outline: none;
+}
+.btn--info-contacts:active::after {
+  color: rgba(0, 0, 0, 0.3);
+}
+.btn--info-contacts b {
+  position: relative;
+  z-index: 4;
 }
 .slider {
   height: 480px;
@@ -845,9 +898,50 @@ input[type="text"] {
 }
 .services {
   margin-top: 50px;
-  background-color: #dad;
+  background-color: #e5e5e5;
   height: 288px;
   margin-top: 172px;
+}
+.services__content {
+  display: none;
+  position: relative;
+}
+.services__content::after {
+  content: "";
+  position: absolute;
+  right: -263px;
+  top: 50px;
+  height: 164px;
+  width: 136px;
+  background-repeat: no-repeat;
+}
+.services__content--delivery::after {
+  background-image: url("../img/delivery.png");
+}
+.services__content--warranty::after {
+  background-image: url("../img/warranty.png");
+  top: 25px;
+  width: 171px;
+  height: 195px;
+  right: -283px;
+}
+.services__content--credit::after {
+  background-image: url("../img/credit.png");
+  top: 25px;
+  width: 156px;
+  height: 188px;
+  right: -259px;
+}
+.services__radio--delivery:checked ~ .services__content--delivery,
+.services__radio--warranty:checked ~ .services__content--warranty,
+.services__radio--credit:checked ~ .services__content--credit {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-left: 121px;
+  margin-top: -65px;
 }
 .services__wrapper {
   display: -webkit-box;
@@ -856,8 +950,11 @@ input[type="text"] {
   -webkit-box-direction: normal;
           flex-direction: row;
 }
+.services__radio {
+  display: none;
+}
 .services__navigation {
-  width: 348px;
+  width: 280px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -870,9 +967,9 @@ input[type="text"] {
   position: absolute;
   width: 7px;
   height: 319px;
-  right: -7px;
+  right: -4px;
   top: -100px;
-  background-color: #f6f;
+  background-color: #000;
 }
 .services__item {
   font-size: 18px;
@@ -886,42 +983,132 @@ input[type="text"] {
   margin-bottom: 44px;
   position: relative;
   cursor: pointer;
-  z-index: 1;
-  display: -webkit-box;
-  display: flex;
+  z-index: 3;
+  width: 255px;
 }
 .services__item::after {
   content: "";
   position: absolute;
   color: #000;
   height: 8px;
-  background-color: #3ebe3e;
+  background-color: #f0c52e;
   width: 160px;
   top: 16px;
   left: 0px;
-  z-index: 10;
-  display: -webkit-box;
-  display: flex;
-}
-.services__item:active {
-  color: #f7e296;
-  background-color: #000;
-}
-.services__item:active::after {
-  display: none;
+  z-index: 2;
 }
 .services__item:hover::after {
   width: 160px;
-  transition: background-color 0.2s ease-in-out;
-}
-.services__item--delivery:active .warranty,
-.services__item--delivery:active .credit {
-  display: none;
+  height: 40px;
+  margin-top: -16px;
+  transition: height 0.5s ease-out 0ms;
 }
 .services__item--warranty {
   padding-left: 28px;
+  width: 252px;
 }
 .services__item--credit {
   margin-top: -19px;
   padding-left: 42px;
+  width: 238px;
+}
+.services__item b {
+  position: relative;
+  z-index: 3;
+}
+.services__radio--delivery:checked ~ .services__navigation .services__item--delivery,
+.services__radio--warranty:checked ~ .services__navigation .services__item--warranty,
+.services__radio--credit:checked ~ .services__navigation .services__item--credit {
+  color: #f7e296;
+  background-color: #000;
+}
+.services__radio--delivery:checked ~ .services__navigation .services__item--delivery::after,
+.services__radio--warranty:checked ~ .services__navigation .services__item--warranty::after,
+.services__radio--credit:checked ~ .services__navigation .services__item--credit::after {
+  display: none;
+}
+.services__title {
+  font-size: 47px;
+  font-family: "Gilroy ExtraBold";
+  letter-spacing: 0.9px;
+  margin-bottom: 25px;
+}
+.services__text {
+  font-size: 15px;
+  font-weight: 30px;
+  font-family: "OpenSans Light";
+  width: 430px;
+  letter-spacing: -0.55px;
+}
+.logotypes {
+  height: 166px;
+  padding-top: 94px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.logotypes__logo img {
+  margin-right: 40px;
+  opacity: 0.2;
+}
+.logotypes__logo img:hover {
+  opacity: 1;
+  transition: 0.2s ease-in;
+  /*PORCHE????!!!!
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0); 
+        */
+}
+.info-contacts {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin-top: 41px;
+}
+.info-contacts__list {
+  margin-top: 71px;
+  margin-left: -5px;
+  letter-spacing: 0.7px;
+  font-family: "Gilroy ExtraBold";
+}
+.info-contacts__item {
+  margin-bottom: 10px;
+}
+.info,
+.contacts {
+  width: 580px;
+}
+.contacts {
+  margin-left: 40px;
+  margin-right: 6px;
+}
+.info-contacts__title {
+  font-size: 47px;
+  font-family: "Gilroy ExtraBold";
+  letter-spacing: 0.9px;
+  margin-bottom: 25px;
+  margin-bottom: 52px;
+  margin-left: -3px;
+}
+.info-contacts__text {
+  width: 560px;
+  font-size: 15px;
+  font-weight: 30px;
+  font-family: "OpenSans Light";
+  letter-spacing: 0.1px;
+  margin-bottom: 30px;
+}
+/*!!!!!!!1
+.info  .info-contacts__text:nth-child(2) {
+    letter-spacing: -0.19px;
+}
+*/
+.page-footer {
+  background-color: #464646;
 }

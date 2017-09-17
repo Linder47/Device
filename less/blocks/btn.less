@@ -1,3 +1,8 @@
+.btn {
+    outline: none;
+    cursor: pointer;
+}
+
 .btn-search {
     display: inline-block;
     margin-top: 0;
@@ -14,7 +19,6 @@
     line-height: 35px;
     font-family: "OpenSans Light", "Arial", sans-serif;
     text-decoration: none;
-    font-weight: 700;
     text-align: center;
 
     outline: none;
@@ -30,4 +34,56 @@
         display: inline-block;
         color: #4d4d4d;
     }
+}
+
+.btn--info-contacts {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 4px;
+    width: 260px;
+    height: 40px;
+    color: #000;
+    border: transparent;
+    padding-left: 6px;
+    margin-left: -4px;
+    font-size: 18px;
+    line-height: 35px;
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    position: relative;
+    letter-spacing: 3.8px;
+    margin-top: 42px;
+    margin-left: 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        color: #000;
+        height: 8px;
+        background-color: @color-yellow-hover;
+        width: 260px;
+        top: 16px;
+        left: -0px;
+        z-index: 2;
+    }
+
+    &:hover::after {
+        width: 260px;
+        height: 40px;
+        margin-top: -16px;
+        transition: height .5s ease-out 0ms;
+        outline: none;
+    }
+
+    &:active::after {
+        color:rgba(0, 0, 0, 0.3);
+    }
+}
+
+.btn--info-contacts b {
+    position: relative;
+    z-index: 4;
 }
