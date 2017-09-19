@@ -19,15 +19,20 @@
 }
 
 .main-nav__item a {
-    text-decoration: none;
     color: #000;
+    text-transform: uppercase;
+}
+
+.main-nav__item--page-header a {
+    color: #000;
+    opacity: 1;
 
     &:hover {
-        color: @main-nav-hover;
+        opacity: 0.6;
     }
 
     &:active {
-        color: @main-nav-active;
+        opacity: 0.3;
     }
 }
 
@@ -88,4 +93,41 @@
 
 .main-nav__item--contacts {
     margin-left: 80px;
+}
+
+.main-nav--page-footer {
+    margin-top: 21px;
+    
+    & a {
+        color: #fff;
+        opacity: 1;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+.main-nav__item--page-footer:first-child {
+    margin-right: 35px;
+}
+
+.main-nav__item--page-footer:nth-child(2) {
+    margin-right: 45px;
+}
+
+.main-nav__item--page-footer:nth-child(3) {
+    margin-right: 23px;
+}
+
+.page-footer__main-nav-text {
+    letter-spacing: -0.3px;
+}
+
+.page-footer__main-nav-text--tel {
+    letter-spacing: -0.1px;
 }

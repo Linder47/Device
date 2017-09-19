@@ -13,16 +13,16 @@
 <body>
 
     <svg style="display: none">
-        <symbol viewBox="0 0 8.672 18.944" id="icon-facebook">
-            <title>icon-facebook</title>
-            <path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"></path>
+        <symbol viewBox="0 0 26.943 34.09" id="logo-htmlacademy">
+            <title>logo-htmlacademy</title>
+            <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
         </symbol>
     </svg>
 
     <div class="main-container">
         <header class="page-header  container">
-            <a class="  logo--page-header">
-                <h1 class="logo">DEVICE</h1>
+            <a class="logo" href="index.html">
+                <h1 class="logo__text  logo__text--page-header">DEVICE</h1>
             </a>
             <div class="navigation  navigation--page-header">
                 <ul class="navigation__list  navigation__list--page-header">
@@ -39,10 +39,10 @@
             </div>
             <nav class="main-nav  main-nav--page-header">
                 <ul class="main-nav__list  main-nav__list--page-header">
-                    <li class="main-nav__item  main-nav__item--magazine  main-nav__item--cross"><a href="#">Каталог товаров</a></li>
-                    <li class="main-nav__item  main-nav__item--delivery"><a href="#">Доставка</a></li>
-                    <li class="main-nav__item  main-nav__item--warranty"><a href="#">Гарантия</a></li>
-                    <li class="main-nav__item  main-nav__item--contacts"><a href="#">Контакты</a></li>
+                    <li class="main-nav__item  main-nav__item--magazine  main-nav__item--page-header  main-nav__item--cross"><a href="#">Каталог товаров</a></li>
+                    <li class="main-nav__item  main-nav__item--delivery  main-nav__item--page-header"><a href="#">Доставка</a></li>
+                    <li class="main-nav__item  main-nav__item--warranty  main-nav__item--page-header"><a href="#">Гарантия</a></li>
+                    <li class="main-nav__item  main-nav__item--contacts  main-nav__item--page-header"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
             <div class="catalog-menu">
@@ -135,7 +135,8 @@
 
         <div class="logotypes  container">
             <div class="logotypes__logo  logotypes__logo-1">
-                <img srcset="img/logo-1.png 1x, img/logo-1@2x.png 2x" alt="logo-1">
+                <img class="logotype-gray" srcset="img/logo-1.png 1x, img/logo-1@2x.png 2x" alt="logo-1">
+               <!-- <img class="logotype" srcset="img/logo-1copy.png 1x, img/logo-1copy@2x.png 2x" alt="logo-1">-->
             </div>
             <div class="logotypes__logo  logotypes__logo-2">
                 <img srcset="img/logo-2.png 1x, img/logo-2@2x.png 2x" alt="logo-2">
@@ -175,7 +176,11 @@
         <footer class="page-footer">
             <div class="page-footer__wrapper  container">
                 <div class="logo-navigation__wrapper">
-                    <div class="logo  logo--page-footer">DEVICE</div>
+                    <div class="logo__wrapper">
+                        <a class="logo" href="index.html">
+                            <h1 class="logo__text  logo__text--page-footer">DEVICE</h1>
+                        </a>
+                    </div>
                     <div class="navigation  navigation--page-footer">
                         <ul class="navigation__list  navigation__list--page-footer">
                             <li class="navigation__item  navigation__item--page-footer"><a href="#">Войти</a></li>
@@ -196,21 +201,23 @@
                     <p class="page-footer__main-nav-text--tel">Тел.: +7 (495) 495-95-95</p>
                 </div>
                 <div class="social__wrapper">
-                    <div class="social__line"></div>
+                    <div class="social__line">
+                        <div class="line"></div>
+                    </div>
                     <div class="social__social-links">
-                        <a class="social-link social-link__fb" href="#">FB
-                                    <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                        <a class="social-link social-link--fb" href="#">FB
+                                    <!--<img src="img/facebook.svg" width="39" height="38">-->
                                 </a>
-                        <a class="social-link social-link__instagram" href="#">INSTAGRAM
-                                    <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use></svg>
+                        <a class="social-link social-link--instagram" href="#">INSTAGRAM
+                                
                                 </a>
-                        <a class="social-link social-link__twitter" href="#">TWITTER
-                                    <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
+                        <a class="social-link social-link--twitter" href="#">TWITTER
+                                
                                 </a>
                     </div>
                     <div class="social__copyright-link">
                         <a class="page-footer__copyright-link" href="#">html-academy
-                                    <svg width="" height=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+                                <svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
                                 </a>
                     </div>
                 </div>
