@@ -39,24 +39,24 @@
             </div>
             <nav class="main-nav  main-nav--page-header">
                 <ul class="main-nav__list  main-nav__list--page-header">
-                    <li class="main-nav__item  main-nav__item--magazine  main-nav__item--page-header  main-nav__item--cross"><a href="#">Каталог товаров</a></li>
+                    <li class="main-nav__item  main-nav__item--magazine  main-nav__item--page-header  main-nav__item--cross"><a href="#">Каталог товаров</a>
+                    
+                        <div class="catalog-menu__wrapper">
+                            <ul class="catalog-menu__list">
+                                <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
+                                <li class="catalog-menu__item"><a href="#">Моноподы для селфи</a></li>
+                                <li class="catalog-menu__item"><a href="#">Экшн-камеры</a></li>
+                                <li class="catalog-menu__item"><a href="#">Фитнесс-браслеты</a></li>
+                                <li class="catalog-menu__item"><a href="#">Умные часы</a></li>
+                                <li class="catalog-menu__item"><a href="#">Квадрокоптеры</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="main-nav__item  main-nav__item--delivery  main-nav__item--page-header"><a href="#">Доставка</a></li>
                     <li class="main-nav__item  main-nav__item--warranty  main-nav__item--page-header"><a href="#">Гарантия</a></li>
                     <li class="main-nav__item  main-nav__item--contacts  main-nav__item--page-header"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="catalog-menu">
-                <div class="catalog-menu__wrapper">
-                    <ul class="catalog-menu__list">
-                        <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
-                        <li class="catalog-menu__item"><a href="#">Моноподы для селфи</a></li>
-                        <li class="catalog-menu__item"><a href="#">Экшн-камеры</a></li>
-                        <li class="catalog-menu__item"><a href="#">Фитнесс-браслеты</a></li>
-                        <li class="catalog-menu__item"><a href="#">Умные часы</a></li>
-                        <li class="catalog-menu__item"><a href="#">Квадрокоптеры</a></li>
-                    </ul>
-                </div>
-            </div>
         </header>
 
         <div class="slider  container"></div>
@@ -134,19 +134,22 @@
         </div>
 
         <div class="logotypes  container">
-            <div class="logotypes__logo  logotypes__logo-1">
-                <img class="logotype-gray" srcset="img/logo-1.png 1x, img/logo-1@2x.png 2x" alt="logo-1">
-               <!-- <img class="logotype" srcset="img/logo-1copy.png 1x, img/logo-1copy@2x.png 2x" alt="logo-1">-->
-            </div>
-            <div class="logotypes__logo  logotypes__logo-2">
-                <img srcset="img/logo-2.png 1x, img/logo-2@2x.png 2x" alt="logo-2">
-            </div>
-            <div class="logotypes__logo  logotypes__logo-3">
-                <img srcset="img/logo-3.png 1x, img/logo-3@2x.png 2x" alt="logo-3">
-            </div>
-            <div class="logotypes__logo  logotypes__logo-4">
-                <img srcset="img/logo-4.png 1x, img/logo-4@2x.png 2x" alt="logo-4">
-            </div>
+            <a class="logotype  logotype__logo-1" href="#">
+                <img class="logotype__img-gray" srcset="img/logo-1-grey@1x.png 1x, img/logo-1-grey@2x.png 2x" alt="logo-1">
+                <img class="logotype__img" srcset="img/logo-1copy.png 1x, img/logo-1copy@2x.png 2x" alt="logo-1">
+            </a>
+            <a class="logotype  logotype__logo-2" href="#">
+                <img class="logotype__img-gray" srcset="img/logo-2-grey@1x.png 1x, img/logo-2-grey@2x.png 2x" alt="logo-2">
+                <img class="logotype__img" srcset="img/logo-2.png 1x, img/logo-2@2x.png 2x" alt="logo-2">
+            </a>
+            <a class="logotype  logotype__logo-3" href="#">
+                <img class="logotype__img-gray" srcset="img/logo-3-grey@1x.png 1x, img/logo-3-grey@2x.png 2x" alt="logo-3">
+                <img class="logotype__img" srcset="img/logo-3.png 1x, img/logo-3@2x.png 2x" alt="logo-3">
+            </a>
+            <a class="logotype  logotype__logo-4" href="#">
+                <img class="logotype__img-gray" srcset="img/logo-4-grey.png 1x, img/logo-4-grey@2x.png 2x" alt="logo-4">
+                <img class="logotype__img" srcset="img/logo-4.png 1x, img/logo-4@2x.png 2x" alt="logo-4">
+            </a>
         </div>
 
         <div class="info-contacts  container">
@@ -183,9 +186,9 @@
                     </div>
                     <div class="navigation  navigation--page-footer">
                         <ul class="navigation__list  navigation__list--page-footer">
-                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Войти</a></li>
-                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Сравнить</a></li>
-                            <li class="navigation__item  navigation__item--page-footer"><a href="#">Корзина</a></li>
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--login-footer"><a href="#">Войти</a></li>
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--compare-footer"><a href="#">Сравнить</a></li>
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--cart-footer"><a href="#">Корзина</a></li>
                         </ul>
                     </div>
                 </div>
@@ -224,6 +227,9 @@
             </div>
         </footer>
     </div>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARb_4YoQhNKOkb9Umyx0NRyUMV4Hpo084&amp;callback=initMap" async
+    defer></script>
 </body>
 
 </html>

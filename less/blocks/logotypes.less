@@ -3,16 +3,23 @@
     padding-top: 94px;
     display: flex;
     flex-direction: row;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); 
+    
 }
 
-.logotypes__logo {
+.logotype {
     margin-right: 40px;
-    opacity: 0.2;
+    position: relative;
+    //cursor: pointer;
 
-    &:hover {
+    &:hover &__img {
         opacity: 1;
         transition: .2s ease-in;
     }
+}
+
+.logotype__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }

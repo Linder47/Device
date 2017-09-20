@@ -42,6 +42,10 @@
     cursor: pointer;
 }
 
+.main-nav__item--magazine:hover + .catalog-menu__wrapper {
+    visibility: visible;
+}
+
 .main-nav__item--cross {
     position: relative;
 
@@ -59,17 +63,17 @@
     &::before {
         transform: rotate(90deg);
     }
-}
 
-    .main-nav__item--cross:hover::before,
-    .main-nav__item--cross:hover::after {
+    &:hover::before,
+    &:hover::after {
         background-color: @cross-hover;
     }
 
-    .main-nav__item--cross:active::before,
-    .main-nav__item--cross:active::after {
+    &:active::before,
+    &:active::after {
         background-color: @cross-active;
     }
+}
 
 .main-nav__item--delivery {
     margin-left: 20px;
@@ -130,4 +134,71 @@
 
 .page-footer__main-nav-text--tel {
     letter-spacing: -0.1px;
+}
+
+.catalog-menu__wrapper {
+    margin-top: 22px;
+    z-index: 7;
+    background-color: @color-yellow;
+    position: relative;
+    visibility: hidden;
+}
+
+.catalog-menu__wrapper--closed {
+    display: none;
+}
+
+.main-nav__item--magazine:hover .catalog-menu__wrapper,
+.catalog-menu__wrapper:hover {
+    visibility: visible;
+}
+
+.catalog-menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 36px;
+    font-family: "OpenSans Light", "Arial", sans-serif;
+    color: @color-navigation;
+    display: flex;
+    flex-direction: row;
+    margin-top: -4px;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    height: 143px;
+}
+
+.catalog-menu__item {
+    width: 200px;
+    margin-right: 40px;
+}
+
+.catalog-menu__item a {
+    text-transform: none;
+}
+
+.catalog-menu__item:nth-child(4),
+.catalog-menu__item:nth-child(5) {
+    margin-right: 0;
+}
+
+.catalog-menu__item:last-child {
+    margin-bottom: 40px;
+}
+
+.catalog-menu__list a {
+    text-decoration: none;
+    color: @color-navigation;
+
+    &:hover {
+        color: @navigation-hover;
+    }
+
+    &:active {
+        color: @navigation-active;
+    }
 }
