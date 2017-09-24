@@ -40,7 +40,7 @@
             <nav class="main-nav  main-nav--page-header">
                 <ul class="main-nav__list  main-nav__list--page-header">
                     <li class="main-nav__item  main-nav__item--magazine  main-nav__item--page-header  main-nav__item--cross"><a href="#">Каталог товаров</a>
-                    
+
                         <div class="catalog-menu__wrapper">
                             <ul class="catalog-menu__list">
                                 <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
@@ -59,7 +59,90 @@
             </nav>
         </header>
 
-        <div class="slider  container"></div>
+        <div class="slider  container">
+            <div class="slider__wrapper">
+                <input class="slider__radio  slider__radio--first" type="radio" name="slider__radio" id="slider__radio-1" checked>
+                <input class="slider__radio  slider__radio--second" type="radio" name="slider__radio" id="slider__radio-2">
+                <input class="slider__radio  slider__radio--third" type="radio" name="slider__radio" id="slider__radio-3">
+                <div class="slider__navigation">
+                    <label class="slider__item  slider__item--first" for="slider__radio-1"><b>First</b></label>
+                    <label class="slider__item  slider__item--second" for="slider__radio-2"><b>Second</b></label>
+                    <label class="slider__item  slider__item--third" for="slider__radio-3"><b>Third</b></label>
+                </div>
+                <div class="slider__content  slider__content--first">
+                    <div class="slider__img-wrapper  slider__img-wrapper-1">
+                        <img class="slider__img" srcset="img/slider-1.png 1x, img/slider-1@2x.png 2x" alt="slider-1">
+                    </div>
+                    <div class="slider__filling">
+                        <p class="slider__number"><b>01</b></p>
+                        <h2 class="slider__title">Делай селфи, <br> как Бен Стиллер!</h2>
+                        <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной
+                            и весом всего 5 килограмм.
+                        </p>
+                        <button class="btn  btn--yellow  btn--slider"><b>Подробнее</b></button>
+
+                        <table class="slider__table">
+                            <tr class="slider__table-big-text">
+                                <td class="slider__table-td">8,5 м</td>
+                                <td class="slider__table-td">5 кг</td>
+                                <td class="slider__table-td">Карбон</td>
+                            </tr>
+                            <tr class="slider__table-small-text">
+                                <td class="slider__table-td">Длина палки</td>
+                                <td class="slider__table-td">Вес палки</td>
+                                <td class="slider__table-td">Материал</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="slider__content  slider__content--second">
+                    <div class="slider__img-wrapper  slider__img-wrapper-2">
+                        <img class="slider__img" srcset="img/slider-2.png 1x, img/slider-2@2x.png 2x" alt="slider-2">
+                    </div>
+                    <div class="slider__filling">
+                        <p class="slider__number"><b>02</b></p>
+                        <h2 class="slider__title">Худеем<br> правильно!</h2>
+                        <p class="slider__text">Мотивирующие фитнесс-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.
+                        </p>
+                        <button class="btn  btn--yellow  btn--slider"><b>Подробнее</b></button>
+
+                        <table class="slider__table">
+                            <tr class="slider__table-big-text">
+                                <td class="slider__table-td">48 часов</td>
+                            </tr>
+                            <tr class="slider__table-small-text">
+                                <td class="slider__table-td">Без подзарядки</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="slider__content  slider__content--third">
+                    <div class="slider__img-wrapper  slider__img-wrapper-3">
+                        <img class="slider__img" srcset="img/slider-3.png 1x, img/slider-3@2x.png 2x" alt="slider-3">
+                    </div>
+                    <div class="slider__filling">
+                        <p class="slider__number"><b>03</b></p>
+                        <h2 class="slider__title">Порхает как бабочка, <br> жалит как пчела!</h2>
+                        <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную
+                            камеру.
+
+                        </p>
+                        <button class="btn  btn--yellow  btn--slider"><b>Подробнее</b></button>
+
+                        <table class="slider__table">
+                            <tr class="slider__table-big-text">
+                                <td class="slider__table-td">800 м</td>
+                                <td class="slider__table-td">50 м</td>
+                            </tr>
+                            <tr class="slider__table-small-text">
+                                <td class="slider__table-td">Дальность полета</td>
+                                <td class="slider__table-td">Радиус поражения</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="popular  container">
             <div class="popular__wrapper">
@@ -104,17 +187,14 @@
 
         <div class="services">
             <div class="services__wrapper  container">
-                <!--<div class="services__radio-wrapper">-->
                 <input class="services__radio  services__radio--delivery" type="radio" name="services__radio" id="services__radio-1" checked>
                 <input class="services__radio  services__radio--warranty" type="radio" name="services__radio" id="services__radio-2">
                 <input class="services__radio  services__radio--credit" type="radio" name="services__radio" id="services__radio-3">
-                <!--</div>-->
                 <div class="services__navigation">
                     <label class="services__item  services__item--delivery" for="services__radio-1"><b>Доставка</b></label>
                     <label class="services__item  services__item--warranty" for="services__radio-2"><b>Гарантия</b></label>
                     <label class="services__item  services__item--credit" for="services__radio-3"><b>Кредит</b></label>
                 </div>
-                <!--<div class="services__content-wrapper">-->
                 <div class="services__content  services__content--delivery">
                     <h3 class="services__title">Доставка</h3>
                     <p class="services__text">Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br>                        заработаем, поднимая его на ваш этаж.</p>
@@ -129,7 +209,6 @@
                     <p class="services__text">Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br>условия
                         кредита. Выгодные для нашего банка, разумеется.</p>
                 </div>
-                <!--</div>-->
             </div>
         </div>
 
@@ -164,15 +243,15 @@
                     <li class="info-contacts__item">Автотрейдинг</li>
                     <li class="info-contacts__item">ЖелДорЭкспедиция</li>
                 </ul>
-                <button class="btn  btn--info-contacts"><b>Подробнее о нас</b></button>
+                <button class="btn  btn--yellow  btn--info-contacts"><b>Подробнее о нас</b></button>
             </div>
             <div class="contacts">
                 <h3 class="info-contacts__title">Контакты</h3>
                 <p class="info-contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки.
                     Всякое бывает.
                 </p>
-                <div class="map"></div>
-                <button class="btn  btn--info-contacts"><b>Напишите нам</b></button>
+                <div id="map"></div>
+                <button class="btn  btn--yellow  btn--info-contacts"><b>Напишите нам</b></button>
             </div>
         </div>
 
@@ -228,8 +307,8 @@
         </footer>
     </div>
     <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARb_4YoQhNKOkb9Umyx0NRyUMV4Hpo084&amp;callback=initMap" async
-    defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBezPb5fd2BkA9Xoc2_aEhsrAos8US-kEc&amp;callback=initMap" async
+        defer></script>
 </body>
 
 </html>

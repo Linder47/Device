@@ -1,3 +1,134 @@
 .slider {
     height: 480px;
+    position: relative;
+    z-index: 5;
+
+    &__wrapper {
+        position: relative;
+        margin-top: -112px;
+    }
+
+    &__navigation {
+        content: "";
+        position: absolute;
+        right: 42px;
+        top: 154px;
+    }
+
+    &__radio {
+        display: none;
+    }
+
+    &__item,
+    &__item--first {
+        font-size: 0;
+        position: relative;
+        margin-left: 29px;
+  
+        &::before {   
+            right: 42px;
+            top: 154px;
+
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0.3;
+            border: 3px solid #000;
+        }
+    }
+
+    &__img-wrapper {
+        &-1 {
+        width: 510px;
+        margin-left: 90px;
+        }
+
+        &-2 {
+            width: 485px;
+            margin-left: 115px;
+            margin-top: 12px;
+        }
+
+        &-3 {
+            width: 570px;
+            margin-top: 65px;
+            margin-left: 30px;
+        }
+    }
+
+    &__filling {
+        width: 520px;
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__radio--first:checked ~ &__content--first,
+    &__radio--second:checked ~ &__content--second,
+    &__radio--third:checked ~ &__content--third {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__radio--first:checked ~ &__item--first::before,
+    &__radio--second:checked ~ &__item--second,
+    &__radio--third:checked ~ &__item--third {
+        opacity: 1;
+    }
+
+    &__title {
+        font-size: 47px;
+        font-family: "Gilroy ExtraBold";
+        line-height: 56px;
+        margin-top: 79px;
+        margin-left: -4px;
+        letter-spacing: 0.6px;
+        margin-bottom: 19px;
+        position: relative;
+        z-index: 6;
+    }
+
+    &__text {
+        letter-spacing: -0.2px;
+    }
+
+    &__table {
+        margin-top: 56px;
+        margin-left: -3px;
+        //border-spacing: 20px;
+    
+        &-td {
+            width: 158px;
+            padding: 0;
+            padding-bottom: 10px;
+        }
+
+        &-td:nth-child(2n) {
+            width: 138px;
+        }
+
+        &-big-text {
+            font-size: 36px;
+            font-family: "Gilroy Light";
+        }
+
+        &-small-text {
+            font-size: 13px;
+            font-family: "OpenSans Light";
+        }
+    }
+
+    &__number {
+        font-family: "Gilroy ExtraBold";
+        font-size: 179.2px;
+        position: absolute;
+        content: "";
+        color: #fff;
+        top: -118px;
+        right: 49px;
+    }
 }
