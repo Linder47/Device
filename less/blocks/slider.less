@@ -1,7 +1,6 @@
 .slider {
     height: 480px;
     position: relative;
-    z-index: 5;
 
     &__wrapper {
         position: relative;
@@ -19,11 +18,11 @@
         display: none;
     }
 
-    &__item,
-    &__item--first {
+    &__item {
         font-size: 0;
         position: relative;
         margin-left: 29px;
+        display: inline-block;
   
         &::before {   
             right: 42px;
@@ -38,6 +37,18 @@
             opacity: 0.3;
             border: 3px solid #000;
         }
+    }
+
+    &__radio--first:hover ~ &__navigation &__item--first::before,
+    &__radio--second:hover ~ &__navigation &__item--second::before,
+    &__radio--third:hover ~ &__navigation &__item--third::before {
+        opacity: 0.6;
+    }
+
+    &__radio--first:checked ~ &__navigation &__item--first::before,
+    &__radio--second:checked ~ &__navigation &__item--second::before,
+    &__radio--third:checked ~ &__navigation &__item--third::before {
+        opacity: 1;
     }
 
     &__img-wrapper {
@@ -89,7 +100,6 @@
         letter-spacing: 0.6px;
         margin-bottom: 19px;
         position: relative;
-        z-index: 6;
     }
 
     &__text {

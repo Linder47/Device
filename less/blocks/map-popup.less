@@ -1,0 +1,52 @@
+.map-popup {
+    position: relative;
+    z-index: 10;
+    height: 0;
+
+    &__btn-close {
+        position: relative;
+        z-index: 11;
+        bottom: 922px;
+        right: -431px;
+        display: block;
+        font-size: 0;
+        cursor: pointer;
+        border: none;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: rgba(237, 214, 139, 0.5);
+        outline: none;
+        
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #AD2424;
+            //bottom: 8px;
+            right: 12px;
+            //z-index: 11;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            box-shadow: none;
+        }
+    
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__map {
+        position: absolute;
+        width: 960px;
+        height: 560px;
+        bottom: 385px;
+        background-color: rgba(221, 170, 221, 0.56);
+        left: 100px;
+    }
+}

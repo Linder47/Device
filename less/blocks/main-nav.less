@@ -1,7 +1,5 @@
 .main-nav {
     margin-top: 31px;
-    position: relative;
-    z-index: 2;
 }
 
 .main-nav__list {
@@ -42,6 +40,8 @@
     width: 300px;
     margin-right: 220px;
     cursor: pointer;
+    padding-left: 60px;
+    margin-left: -60px;
 }
 
 .main-nav__item--cross {
@@ -136,9 +136,9 @@
 
 .catalog-menu__wrapper {
     margin-top: 22px;
+    visibility: hidden;
     background-color: #dad;
     position: relative;
-    visibility: hidden;
     z-index: 11;
 }
 
@@ -147,14 +147,8 @@
     visibility: visible;
 }
 
-.main-nav__item--magazine:hover  .catalog-menu__wrapper  .catalog-menu__list,
-.catalog-menu__wrapper:hover  .catalog-menu__list {
-    background-color: #dad;
-    position: relative;
-    z-index: 121;
-}
-
 .catalog-menu__list {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -172,7 +166,9 @@
     align-content: flex-start;
     height: 143px;
     background-color: @color-yellow;
-    z-index: 11;
+    width: 1100px;
+    margin-left: -60px;
+    padding-left: 60px;
 }
 
 .catalog-menu__item {
