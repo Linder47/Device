@@ -1,7 +1,12 @@
 .map-popup {
+    visibility: visible;
     position: relative;
     z-index: 10;
     height: 0;
+
+    &--close {
+        visibility: hidden;
+    }
 
     &__btn-close {
         position: relative;
@@ -15,9 +20,17 @@
         width: 54px;
         height: 54px;
         border-radius: 50%;
-        background-color: rgba(237, 214, 139, 0.5);
+        background-color: rgba(255, 196, 0, 0.5);
         outline: none;
         
+        &:hover {
+            background-color: rgba(255, 196, 0, 1);
+        }
+
+        &:invalid {
+            background-color: @color-input-invalid;
+            opacity: 0.5;
+        }
 
         &::before,
         &::after {
@@ -25,10 +38,9 @@
             position: absolute;
             width: 30px;
             height: 2px;
-            background-color: #AD2424;
-            //bottom: 8px;
+            background-color: #fff;
             right: 12px;
-            //z-index: 11;
+            opacity: 1;
         }
 
         &::before {
@@ -39,6 +51,11 @@
         &::after {
             transform: rotate(-45deg);
         }
+
+        &:focus::before,
+        &:focus::after {
+            opacity: 0.3;
+        }
     }
 
     &__map {
@@ -46,7 +63,10 @@
         width: 960px;
         height: 560px;
         bottom: 385px;
-        background-color: rgba(221, 170, 221, 0.56);
+        background-color: #fff;
         left: 100px;
+        box-shadow: -40px 0 40px -40px rgba(0, 1, 1, .75),
+        40px 0 40px -40px rgba(0, 1, 1, .75),
+        0 10px 20px 0 rgba(0, 1, 1, .2);
     }
 }

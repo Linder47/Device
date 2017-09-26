@@ -250,8 +250,10 @@
                 <p class="info-contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки.
                     Всякое бывает.
                 </p>
-                <div id="map"></div>
-                <button class="btn  btn--yellow  btn--info-contacts"><b>Напишите нам</b></button>
+                <div id="map">
+                    <img class="map-image" srcset="img/map.jpg 1x, img/map@2x.jpg 2x" alt="map-img">
+                </div>
+                <button class="btn  btn--yellow  btn--info-contacts  btn--write-us"><b>Напишите нам</b></button>
             </div>
         </div>
 
@@ -308,6 +310,21 @@
         <div class="map-popup  map-popup--close  container">
             <button class="map-popup__btn-close  container">Закрыть</button>
             <div class="map-popup__map" id="google-map"></div>
+        </div>
+        <div class="write-us-popup  write-us-popup--close">
+            <button class="write-us-popup__btn-close">Закрыть</button>
+            <form class="write-us-popup__wrapper">
+                <label class="write-us-popup__label  write-us-popup__label--half">Ваше имя:
+                    <input class="write-us-popup__input" placeholder="Представьтесь, пожалуйста">
+                </label>
+                <label class="write-us-popup__label  write-us-popup__label--half  write-us-popup__label--right">Ваш e-mail:
+                    <input class="write-us-popup__input" placeholder="Для отправки ответа">
+                </label>
+                <label class="write-us-popup__label">Текст письма:
+                    <textarea class="write-us-popup__textarea" placeholder="В свободной форме"></textarea>
+                </label>
+                <button class="btn  btn--yellow  btn--write-us" type="submit"><b>Отправить</b></button>
+            </form>
         </div>
     </div>
     <script src="js/main.js"></script>

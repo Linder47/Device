@@ -440,40 +440,77 @@ input[type="text"] {
   color: #272525;
 }
 ::-webkit-input-placeholder {
-  color: #b8a974;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
+  letter-spacing: 0.6px;
 }
 :hover::-webkit-input-placeholder {
-  color: #7a7152;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :focus::-webkit-input-placeholder {
-  color: #272525;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 1;
 }
 ::-moz-placeholder {
-  color: #b8a974;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :hover::-moz-placeholder {
-  color: #7a7152;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :focus::-moz-placeholder {
-  color: #272525;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 1;
 }
 :-moz-placeholder {
-  color: #b8a974;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :hover:-moz-placeholder {
-  color: #7a7152;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :focus:-moz-placeholder {
-  color: #272525;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 1;
 }
 :-ms-input-placeholder {
-  color: #b8a974;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :hover:-ms-input-placeholder {
-  color: #7a7152;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 0.4;
 }
 :focus:-ms-input-placeholder {
-  color: #272525;
+  color: #464646;
+  font-family: "OpenSans Regular";
+  font-size: 14px;
+  opacity: 1;
 }
 a {
   text-decoration: none;
@@ -606,7 +643,7 @@ a {
   visibility: hidden;
   background-color: #dad;
   position: relative;
-  z-index: 11;
+  z-index: 7;
 }
 .main-nav__item--magazine:hover .catalog-menu__wrapper,
 .catalog-menu__wrapper:hover {
@@ -922,6 +959,9 @@ a {
 }
 .btn--slider:hover::after {
   width: 220px;
+}
+.btn--write-us {
+  margin-top: 30px;
 }
 .slider {
   height: 480px;
@@ -1528,9 +1568,13 @@ a {
   margin-bottom: 33px;
 }
 .map-popup {
+  visibility: visible;
   position: relative;
   z-index: 10;
   height: 0;
+}
+.map-popup--close {
+  visibility: hidden;
 }
 .map-popup__btn-close {
   position: relative;
@@ -1544,8 +1588,15 @@ a {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background-color: rgba(237, 214, 139, 0.5);
+  background-color: rgba(255, 196, 0, 0.5);
   outline: none;
+}
+.map-popup__btn-close:hover {
+  background-color: #ffc400;
+}
+.map-popup__btn-close:invalid {
+  background-color: #edb5b5;
+  opacity: 0.5;
 }
 .map-popup__btn-close::before,
 .map-popup__btn-close::after {
@@ -1553,8 +1604,9 @@ a {
   position: absolute;
   width: 30px;
   height: 2px;
-  background-color: #AD2424;
+  background-color: #fff;
   right: 12px;
+  opacity: 1;
 }
 .map-popup__btn-close::before {
   -webkit-transform: rotate(45deg);
@@ -1565,11 +1617,138 @@ a {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+.map-popup__btn-close:focus::before,
+.map-popup__btn-close:focus::after {
+  opacity: 0.3;
+}
 .map-popup__map {
   position: absolute;
   width: 960px;
   height: 560px;
   bottom: 385px;
-  background-color: rgba(221, 170, 221, 0.56);
+  background-color: #fff;
   left: 100px;
+  box-shadow: -40px 0 40px -40px rgba(0, 1, 1, 0.75), 40px 0 40px -40px rgba(0, 1, 1, 0.75), 0 10px 20px 0 rgba(0, 1, 1, 0.2);
+}
+.write-us-popup {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  margin-left: -480px;
+  margin-top: -280px;
+  box-sizing: border-box;
+  width: 960px;
+  height: 560px;
+  padding: 0 100px;
+  padding-top: 45px;
+  padding-bottom: 70px;
+  background-color: #ffffff;
+  box-shadow: -40px 0 40px -40px rgba(0, 1, 1, 0.75), 40px 0 40px -40px rgba(0, 1, 1, 0.75), 0 10px 20px 0 rgba(0, 1, 1, 0.2);
+}
+.write-us-popup--close {
+  visibility: hidden;
+}
+.write-us-popup__btn-close {
+  position: relative;
+  z-index: 11;
+  bottom: 25px;
+  right: -783px;
+  display: block;
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgba(255, 196, 0, 0.5);
+  outline: none;
+}
+.write-us-popup__btn-close:hover {
+  background-color: #ffc400;
+}
+.write-us-popup__btn-close:invalid {
+  background-color: #edb5b5;
+  opacity: 0.5;
+}
+.write-us-popup__btn-close::before,
+.write-us-popup__btn-close::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  right: 12px;
+  opacity: 1;
+}
+.write-us-popup__btn-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  box-shadow: none;
+}
+.write-us-popup__btn-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.write-us-popup__btn-close:focus::before,
+.write-us-popup__btn-close:focus::after {
+  opacity: 0.3;
+}
+.write-us-popup__wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+}
+.write-us-popup__label {
+  font-size: 18px;
+  font-family: "Gilroy ExtraBold";
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 12px;
+}
+.write-us-popup__label--half {
+  width: 360px;
+}
+.write-us-popup__label--right {
+  margin-left: 40px;
+}
+.write-us-popup__input {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 8px 16px;
+  border: 3px solid transparent;
+  outline: none;
+  margin-top: 5px;
+  background-color: #f2f2f2;
+}
+.write-us-popup__input:hover {
+  background-color: #eaeaea;
+}
+.write-us-popup__input:focus {
+  background-color: #fff;
+  border: 3px solid #e5e5e5;
+}
+.write-us-popup__textarea {
+  margin-top: 4px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  width: 760px;
+  min-height: 155px;
+  outline: none;
+  resize: none;
+  border: 3px solid transparent;
+  background-color: #f2f2f2;
+}
+.write-us-popup__textarea:hover {
+  background-color: #eaeaea;
+}
+.write-us-popup__textarea:focus {
+  background-color: #fff;
+  border: 3px solid #e5e5e5;
 }
