@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--<link href="" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <svg style="display: none">
+        <symbol viewBox="0 0 26.943 34.09" id="logo-htmlacademy">
+            <title>logo-htmlacademy</title>
+            <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
+        </symbol>
+    </svg>
+
+    <div class="main-container">
+        <header class="page-header  container">
+            <a class="logo" href="index.html">
+                <h1 class="logo__text  logo__text--page-header">DEVICE</h1>
+            </a>
+            <div class="navigation  navigation--page-header">
+                <ul class="navigation__list  navigation__list--page-header">
+                    <li class="navigation__item  navigation__item--page-header  navigation__item--search">
+                        <div class="search__wrapper">
+                            <input id="search" name="search" type="text" placeholder="Поиск по сайту">
+                            <button class="btn  btn-search">Найти</button>
+                        </div>
+                    </li>
+                    <li class="navigation__item  navigation__item--page-header  navigation__item--login"><a href="#">Валентин Петухов</a></li>
+                    <li class="navigation__item  navigation__item--page-header  navigation__item--log-out"><a href="#">Выйти</a></li>
+                    <li class="navigation__item  navigation__item--page-header  navigation__item--compare"><a href="#">Сравнить</a></li>
+                    <li class="navigation__item  navigation__item--page-header  navigation__item--cart"><a href="#">Корзина</a></li>
+                </ul>
+            </div>
+            <nav class="main-nav  main-nav--page-header">
+                <ul class="main-nav__list  main-nav__list--page-header">
+                    <li class="main-nav__item  main-nav__item--magazine  main-nav__item--page-header  main-nav__item--cross"><a href="#">Каталог товаров</a>
+
+                        <div class="catalog-menu__wrapper">
+                            <ul class="catalog-menu__list">
+                                <li class="catalog-menu__item"><a href="#">Виртуальная реальность</a></li>
+                                <li class="catalog-menu__item"><a href="#">Моноподы для селфи</a></li>
+                                <li class="catalog-menu__item"><a href="#">Экшн-камеры</a></li>
+                                <li class="catalog-menu__item"><a href="#">Фитнесс-браслеты</a></li>
+                                <li class="catalog-menu__item"><a href="#">Умные часы</a></li>
+                                <li class="catalog-menu__item"><a href="#">Квадрокоптеры</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main-nav__item  main-nav__item--delivery  main-nav__item--page-header"><a href="#">Доставка</a></li>
+                    <li class="main-nav__item  main-nav__item--warranty  main-nav__item--page-header"><a href="#">Гарантия</a></li>
+                    <li class="main-nav__item  main-nav__item--contacts  main-nav__item--page-header"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="catalog">
+            <div class="catalog__navigation">
+                <h1 class="catalog__title">Моноподы для селфи</h1>
+                <div class="catalog__breadcrumbs">
+                    <a class="breadcrumbs__link" href="#">Главная</a>
+                    <span class="breadcrumbs__indicator"></span>
+                    <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+                    <span class="breadcrumbs__indicator"></span>
+                    <a class="breadcrumbs__link" href="#">Моноподы для селфи</a>
+                </div>
+            </div>
+
+            <div class="catalog__sort">
+                <b class="sort__big-nav">Фильтр:</b>
+                <b class="sort__big-nav">Сортировка:</b>
+                <b class="sort__small-nav">По цене</b>
+                <b class="sort__small-nav">По типу</b>
+                <b class="sort__small-nav">По популярности</b>
+                <span class="sort__triangle"></span>
+                <span class="sort__triangle"></span>
+            </div>
+
+            <div class="catalog__filter">
+                <form class="filter-form">
+                    <fieldset class="filter-form__section  filter-form__section--price-line">
+                        <legend class="filter__section-name">Стоимость:</legend>
+                        <span class="filter__price-line"></span>
+                        <p class="filter__price  filter__price-min">от 0</p>
+                        <p class="filter__price  filter__price-max">до 5000</p>
+                    </fieldset>
+                    <fieldset class="filter-form__section  filter-form__section--checkbox">
+                        <legend class="filter__section-name">Цвет:</legend>
+                        <div class="section--checkbox__wrapper">
+                            <div class="checkbox__element-wrapper">
+                                <input id="checkbox-black" name="color" type="checkbox" value="checkbox-black" checked>
+                                <label class="filter-form__checkbox-label" for="checkbox-black">Черный</label>
+                            </div>
+                            <div class="checkbox__element-wrapper">
+                                <input id="checkbox-white" name="color" type="checkbox" value="checkbox-white">
+                                <label class="filter-form__checkbox-label" for="checkbox-white">Белый</label>
+                            </div>
+                            <div class="checkbox__element-wrapper">
+                                <input id="checkbox-blue" name="color" type="checkbox" value="checkbox-blue" checked>
+                                <label class="filter-form__checkbox-label" for="checkbox-blue">Синий</label>
+                            </div>
+                            <div class="checkbox__element-wrapper">
+                                <input id="checkbox-red" name="color" type="checkbox" value="checkbox-red" checked>
+                                <label class="filter-form__checkbox-label" for="checkbox-red">Красный</label>
+                            </div>
+                            <div class="checkbox__element-wrapper">
+                                <input id="checkbox-pink" name="color" type="checkbox" value="checkbox-pink">
+                                <label class="filter-form__checkbox-label" for="checkbox-pink">Розовый</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-form__section  filter-form__section--radio">
+                        <legend class="filter__section-name">Bluetooth:</legend>
+                        <div class="radio__element-wrapper">
+                            <input id="yes" name="availability" type="radio" value="yes" checked>
+                            <label class="filter-form_radio-label" for="yes">Есть</label>
+                        </div>
+                        <div class="radio__element-wrapper">
+                            <input id="yes" name="availability" type="radio" value="yes">
+                            <label class="filter-form_radio-label" for="yes">Нет</label>
+                        </div>
+                    </fieldset>
+                    <button class="btn  btn--yellow btn--form"><b>Показать</b></button>
+                </form>
+            </div>
+
+            <div class="catalog__items">
+                <div class="catalog__items-wrapper">
+                    <div class="item__wrapper">
+                        <div class="item__image"></div>
+                        <div class="item__description">
+                            <p class="description__name">Любительская селфи-палка</p>
+                            <p class="description__price">500 р.</p>
+                        </div>
+                    </div>
+                    <div class="item__wrapper">
+                        <div class="item__image"></div>
+                        <div class="item__description">
+                            <p class="description__name">Профессиональная селфи-палка</p>
+                            <p class="description__price">1 500 р.</p>
+                        </div>
+                    </div>
+                    <div class="item__wrapper">
+                        <div class="item__image"></div>
+                        <div class="item__description">
+                            <p class="description__name">Непотопляемая селфи-палка</p>
+                            <p class="description__price">2 500 р.</p>
+                        </div>
+                    </div>
+                    <div class="item__wrapper">
+                        <div class="item__image  item__image--new"></div>
+                        <div class="item__description">
+                            <p class="description__name">Селфи палка "Следуй за мной"</p>
+                            <p class="description__price">4 900 р.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__items-pages">
+                    <div class="items-pages__block  items-pages__left">
+                        <b class="items-pages__block-page  items-pages__block-page--active">Назад</b>
+                    </div>
+                    <div class="items-pages__block  items-pages__center">
+                        <b class="items-pages__block-page  items-pages__block-page--active">1</b>
+                        <b class="items-pages__block-page">2</b>
+                        <b class="items-pages__block-page">3</b>
+                    </div>
+                    <div class="items-pages__block  items-pages__right">
+                        <b class="items-pages__block-page  items-pages__block-page--active">Вперед</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="page-footer">
+            <div class="page-footer__wrapper  container">
+                <div class="logo-navigation__wrapper">
+                    <div class="logo__wrapper">
+                        <a class="logo" href="index.html">
+                            <h1 class="logo__text  logo__text--page-footer">DEVICE</h1>
+                        </a>
+                    </div>
+                    <div class="navigation  navigation--page-footer">
+                        <ul class="navigation__list  navigation__list--page-footer">
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--login-footer"><a href="#">Выйти</a></li>
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--compare-footer"><a href="#">Сравнить</a></li>
+                            <li class="navigation__item  navigation__item--page-footer  navigation__item--cart-footer"><a href="#">Корзина</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-nav__wrapper">
+                    <p class="page-footer__main-nav-text">г. Москва, ул. Строителей, 15</p>
+                    <nav class="main-nav  main-nav--page-footer">
+                        <ul class="main-nav__list  main-nav__list--page-footer">
+                            <li class="main-nav__item  main-nav__item--page-footer"><a href="#">Доставка</a></li>
+                            <li class="main-nav__item  main-nav__item--page-footer"><a href="#">Гарантия</a></li>
+                            <li class="main-nav__item  main-nav__item--page-footer"><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <p class="page-footer__main-nav-text--tel">Тел.: +7 (495) 495-95-95</p>
+                </div>
+                <div class="social__wrapper">
+                    <div class="social__line">
+                        <div class="line"></div>
+                    </div>
+                    <div class="social__social-links">
+                        <a class="social-link social-link--fb" href="#">FB
+                                    <!--<img src="img/facebook.svg" width="39" height="38">-->
+                                </a>
+                        <a class="social-link social-link--instagram" href="#">INSTAGRAM
+                                
+                                </a>
+                        <a class="social-link social-link--twitter" href="#">TWITTER
+                                
+                                </a>
+                    </div>
+                    <div class="social__copyright-link">
+                        <a class="page-footer__copyright-link" href="#">html-academy
+                                <svg width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+                                </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="map-popup  map-popup--close  container">
+            <button class="map-popup__btn-close  container">Закрыть</button>
+            <div class="map-popup__map" id="google-map"></div>
+        </div>
+        <div class="write-us-popup  write-us-popup--close">
+            <button class="write-us-popup__btn-close">Закрыть</button>
+            <form class="write-us-popup__wrapper">
+                <label class="write-us-popup__label  write-us-popup__label--half">Ваше имя:
+                    <input class="write-us-popup__input" placeholder="Представьтесь, пожалуйста">
+                </label>
+                <label class="write-us-popup__label  write-us-popup__label--half  write-us-popup__label--right">Ваш e-mail:
+                    <input class="write-us-popup__input" placeholder="Для отправки ответа">
+                </label>
+                <label class="write-us-popup__label">Текст письма:
+                    <textarea class="write-us-popup__textarea" placeholder="В свободной форме"></textarea>
+                </label>
+                <button class="btn  btn--yellow  btn--write-us" type="submit"><b>Отправить</b></button>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBezPb5fd2BkA9Xoc2_aEhsrAos8US-kEc&amp;callback=initMap" async
+        defer></script>
+</body>
+
+</html>
