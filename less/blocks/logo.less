@@ -1,38 +1,42 @@
 .logo__text {
     font-size: 48px;
-    //line-height: 60px;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0.6px;
     cursor: pointer;
     padding: 0;
-}
 
-.logo__text--page-header {
-    margin-left: -3px;
-    margin-top: -15px;
-    color: #000;
-
-    &:hover {
-        color: @color-logo-hover;
+    &--page-header {
+        margin-left: -3px;
+        margin-top: -15px;
+        color: #000;
+    
+        &:hover {
+            color: @color-logo-hover;
+        }
+    
+        &:active {
+            color: @color-logo-active;
+        }
     }
 
-    &:active {
-        color: @color-logo-active;
+    &--page-footer {
+        margin-top: -5px;
+        margin-left: -3px;
+        color: @color-yellow;
+    
+        &:hover {
+            color: @color-yellow-hover;
+        }
+    
+        &:active {
+            opacity: 0.3;
+        }
     }
-}
 
-.logo__text--page-footer {
-    margin-top: -5px;
-    margin-left: -3px;
-    color: @color-yellow;
-
-    &:hover {
-        color: @color-yellow-hover;
-    }
-
-    &:active {
-        opacity: 0.3;
+    &--other-pages {
+        margin-left: -1px;
+        margin-top: -13px;
     }
 }

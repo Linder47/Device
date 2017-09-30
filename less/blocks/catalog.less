@@ -1,0 +1,189 @@
+.catalog {
+    &__title {
+        font-size: 47px;
+        font-family: "Gilroy ExtraBold";
+        line-height: 56px;
+        letter-spacing: .6px;
+        margin-top: 34px;
+    }
+
+    &__breadcrumbs {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: "OpenSans Light", "Arial", sans-serif;
+        color: #000;
+        display: flex;
+        flex-direction: row;
+        margin-top: -14px;
+    }
+
+    &__sort {
+        margin-top: 43px;
+        height: 70px;
+        background-color: @color-sort;
+    }
+
+    &__sort-wrapper-content {
+        display: flex;
+        flex-direction: row;
+        margin-top: -70px;
+    }
+}
+
+.breadcrumbs {
+    &__link {
+        font-size: 14px;
+        font-family: "OpenSans Light";
+        letter-spacing: -0.3px;
+        color: #000;
+        cursor: default;
+    }
+
+    &__link:not(:last-child) {
+        margin-right: 17px;
+        cursor: pointer;
+    }
+
+    &__link:not(:first-child) {
+        letter-spacing: 0.15px; 
+        padding-left: 22px; 
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../img/sprite47.svg");
+            background-repeat: no-repeat;
+            background-position-y: center;   
+            top: 12px;
+            left: 0px;
+            width: 4px;
+            height: 7px;
+            opacity: 1;
+            background-position: -16px -46px;
+        }
+    }   
+
+    &__link a {
+        opacity: 0.3;
+        color: #000;
+    }
+    
+    &__link:not(:last-child) a[href] {
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.1;
+        }
+    }
+}
+
+.sort {
+    &__sorting {
+        justify-content: space-between;
+    }
+
+    &__filter-color {
+        height: 70px;
+        width: 26.9%;
+        background-color: @color-sort-grey;
+    }
+
+    &__filter {
+        width: 267px;
+        background-color: @color-sort-grey;
+        height: 70px;
+        box-sizing: border-box;
+        padding-top: 19px;
+    }
+
+    &__sorting {
+        height: 70px;
+        width: 833px;
+        box-sizing: border-box;
+        padding-top: 19px;
+        padding-left: 74px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__sorting &__big-nav {
+        margin-right: 20px;
+    }
+
+    &__big-nav {
+        color: #000;
+        letter-spacing: 3.6px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: "Gilroy ExtraBold";
+    }
+
+    &__small-nav {
+        font-size: 14px;
+        color: #000;
+        font-family: "OpenSans";
+        margin-left: 26px;
+        opacity: 0.3;
+        cursor: pointer;
+        font-weight: 300;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+
+        &--checked {
+            opacity: 1;
+        }
+    }
+
+    &__triangle {
+        background-image: url("../img/sprite47.svg");
+        background-repeat: no-repeat;
+        top: 12px;
+        left: 0px;
+        width: 19px;
+        height: 11px;
+        opacity: 1;
+        display: inline-block;
+        margin-top: 9px;
+        margin-left: 2px;
+        cursor: pointer;
+        opacity: 0.3;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 1;
+        }
+
+        &--sort-up {
+            background-position: -9px -7px;
+        }
+
+        &--sort-down {
+            background-position: -8px -26px;
+        }
+
+        &--checked {
+            opacity: 1;
+        }
+    }
+}
+
+.triangles__wrapper {
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+}
