@@ -31,6 +31,36 @@
         flex-direction: row;
         margin-top: -70px;
     }
+
+    &__filter {
+        width: 267px;
+        min-width: 267px;
+        background-color: @color-sort;
+    }
+
+    &__items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        padding-top: 70px;
+        padding-left: 73px;
+        box-sizing: border-box;
+    }
+
+    &__items-pages {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 760px;
+        margin-left: 73px;
+        height: 70px;
+        background-color: @color-sort;
+        margin-top: -11px;
+        align-items: center;
+        //padding-left: 29px;
+        //padding-right: 26px;
+        box-sizing: border-box;
+    }
 }
 
 .breadcrumbs {
@@ -95,11 +125,11 @@
     }
 
     &__filter {
-        width: 267px;
         background-color: @color-sort-grey;
         height: 70px;
         box-sizing: border-box;
         padding-top: 19px;
+        width: 267px;
     }
 
     &__sorting {
@@ -186,4 +216,166 @@
     width: 65px;
     display: flex;
     justify-content: space-between;
+}
+
+.item {
+    &__wrapper {
+        margin-bottom: 33px;
+    }
+
+    &__wrapper:nth-child(2n) {
+        margin-left: 40px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: row;
+        margin-top: 14px;
+        margin-left: -1px;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__image {
+        background-color: #eeeeee;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        height: 379px;
+
+        &:hover {
+            background-color: rgba(238, 238, 238, 0.3);
+        }
+    }
+
+    /*&__img-hover-menu {
+        margin-top: -345px;
+        text-align: center;
+        visibility: hidden;
+        margin-bottom: 217px;
+    }
+    */
+
+    &__img-hover-menu {
+        margin-top: -260px;
+        text-align: center;
+        margin-bottom: 137px;
+    }
+    
+
+    /*&__img {
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+    */
+    
+    
+}
+
+.item__image:hover ~ .item__img-hover-menu,
+.item__img-hover-menu:hover {
+    visibility: visible;
+}
+
+/*.item__img-hover-menu:hover ~ .item__image  .item__img,
+.item__img-hover-menu  .btn--image:hover ~ .item__image  .item__img,
+.item__img-hover-menu  .img-hover-menu__text:hover ~ .item__image  .item__img  img,
+ {
+    opacity: 0.3;
+}
+*/
+
+
+.items {
+    &-pages {
+        &__left {
+            width: 125px;
+            text-align: center;
+            height: 70px;
+            display: flex;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #d9d9d9;
+            }
+        }
+
+        &__right {
+            width: 137px;
+            text-align: center;
+            height: 70px;
+            display: flex;
+            margin-right: -1px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #d9d9d9;
+            }
+        }
+
+        &__left  &__block-page,
+        &__right  &__block-page {
+            margin: auto;
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
+        &__block-page {
+            font-size: 16px;
+            font-family: "Gilroy ExtraBold";
+            text-transform: uppercase;
+            letter-spacing: 3.7px;
+            opacity: 0.3;
+            cursor: pointer;
+
+            &--number:not(:last-child) {
+                padding-right: 19px;
+            }
+
+            &--number {
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                &:active {
+                    opacity: 1;
+                }
+            }
+
+            &--active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.description {
+    &__name {
+        font-size: 18px;
+        font-family: "Gilroy ExtraBold";
+        letter-spacing: 0.3px;
+        line-height: 21px;
+    }
+
+    &__price {
+        font-size: 16px;
+        font-family: "Gilroy Light";
+    }
+}
+
+.img-hover-menu__text  {
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        opacity: 0.2;
+    }
 }

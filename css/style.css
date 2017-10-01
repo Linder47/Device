@@ -441,7 +441,7 @@ body {
 .form-container {
   width: 205px;
   margin-left: 0;
-  background-color: #B19766;
+  background-color: #ebebeb;
   margin-left: -3px;
 }
 input[type="text"] {
@@ -998,6 +998,25 @@ a {
 .btn--write-us {
   margin-top: 30px;
 }
+.btn--form {
+  width: 204px;
+  margin-top: 27px;
+}
+.btn--form::after {
+  width: 201px;
+}
+.btn--form:hover::after {
+  width: 201px;
+}
+.btn--image {
+  width: 200px;
+}
+.btn--image::after {
+  width: 200px;
+}
+.btn--image:hover::after {
+  width: 200px;
+}
 .slider {
   height: 480px;
   position: relative;
@@ -1222,7 +1241,7 @@ a {
 }
 .services {
   margin-top: 50px;
-  background-color: #e5e5e5;
+  background-color: #dbdbdb;
   height: 288px;
   margin-top: 172px;
 }
@@ -1827,6 +1846,37 @@ a {
           flex-direction: row;
   margin-top: -70px;
 }
+.catalog__filter {
+  width: 267px;
+  min-width: 267px;
+  background-color: #ebebeb;
+}
+.catalog__items-wrapper {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  padding-top: 70px;
+  padding-left: 73px;
+  box-sizing: border-box;
+}
+.catalog__items-pages {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 760px;
+  margin-left: 73px;
+  height: 70px;
+  background-color: #ebebeb;
+  margin-top: -11px;
+  -webkit-box-align: center;
+          align-items: center;
+  box-sizing: border-box;
+}
 .breadcrumbs__link {
   font-size: 14px;
   font-family: "OpenSans Light";
@@ -1876,11 +1926,11 @@ a {
   background-color: #dcdcdc;
 }
 .sort__filter {
-  width: 267px;
   background-color: #dcdcdc;
   height: 70px;
   box-sizing: border-box;
   padding-top: 19px;
+  width: 267px;
 }
 .sort__sorting {
   height: 70px;
@@ -1958,6 +2008,139 @@ a {
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
+.item {
+  /*&__img-hover-menu {
+        margin-top: -345px;
+        text-align: center;
+        visibility: hidden;
+        margin-bottom: 217px;
+    }
+    */
+  /*&__img {
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+    */
+}
+.item__wrapper {
+  margin-bottom: 33px;
+}
+.item__wrapper:nth-child(2n) {
+  margin-left: 40px;
+}
+.item__description {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  margin-top: 14px;
+  margin-left: -1px;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+          align-items: baseline;
+}
+.item__image {
+  background-color: #eeeeee;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  height: 379px;
+}
+.item__image:hover {
+  background-color: rgba(238, 238, 238, 0.3);
+}
+.item__img-hover-menu {
+  margin-top: -260px;
+  text-align: center;
+  margin-bottom: 137px;
+}
+.item__image:hover ~ .item__img-hover-menu,
+.item__img-hover-menu:hover {
+  visibility: visible;
+}
+/*.item__img-hover-menu:hover ~ .item__image  .item__img,
+.item__img-hover-menu  .btn--image:hover ~ .item__image  .item__img,
+.item__img-hover-menu  .img-hover-menu__text:hover ~ .item__image  .item__img  img,
+ {
+    opacity: 0.3;
+}
+*/
+.items-pages__left {
+  width: 125px;
+  text-align: center;
+  height: 70px;
+  display: -webkit-box;
+  display: flex;
+  cursor: pointer;
+}
+.items-pages__left:hover {
+  background-color: #d9d9d9;
+}
+.items-pages__right {
+  width: 137px;
+  text-align: center;
+  height: 70px;
+  display: -webkit-box;
+  display: flex;
+  margin-right: -1px;
+  cursor: pointer;
+}
+.items-pages__right:hover {
+  background-color: #d9d9d9;
+}
+.items-pages__left .items-pages__block-page,
+.items-pages__right .items-pages__block-page {
+  margin: auto;
+}
+.items-pages__left .items-pages__block-page:active,
+.items-pages__right .items-pages__block-page:active {
+  opacity: 0.3;
+}
+.items-pages__block-page {
+  font-size: 16px;
+  font-family: "Gilroy ExtraBold";
+  text-transform: uppercase;
+  letter-spacing: 3.7px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.items-pages__block-page--number:not(:last-child) {
+  padding-right: 19px;
+}
+.items-pages__block-page--number:hover {
+  opacity: 0.6;
+}
+.items-pages__block-page--number:active {
+  opacity: 1;
+}
+.items-pages__block-page--active {
+  opacity: 1;
+}
+.description__name {
+  font-size: 18px;
+  font-family: "Gilroy ExtraBold";
+  letter-spacing: 0.3px;
+  line-height: 21px;
+}
+.description__price {
+  font-size: 16px;
+  font-family: "Gilroy Light";
+}
+.img-hover-menu__text {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.img-hover-menu__text:hover {
+  opacity: 1;
+}
+.img-hover-menu__text:active {
+  opacity: 0.2;
+}
 .filter-and-items-color__wrapper {
   display: -webkit-box;
   display: flex;
@@ -1966,7 +2149,7 @@ a {
           flex-direction: row;
 }
 .filter-and-items-content__wrapper {
-  margin-top: -1212px;
+  margin-top: -1100px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -1974,24 +2157,76 @@ a {
           flex-direction: row;
 }
 .catalog__filter-color {
-  height: 1212px;
+  height: 1100px;
   width: 26.9%;
   background-color: #ebebeb;
 }
 .catalog__filter {
   width: 267px;
-  background-color: #dcdcdc;
+  background-color: #ebebeb;
   box-sizing: border-box;
 }
 .filter-form {
   margin-top: 69px;
 }
 .filter-form__checkbox-label {
-  position: relative;
   padding-left: 40px;
   text-transform: none;
   font-family: "OpenSans Light";
   font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.filter-form__checkbox-label::before {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: 5px 8px;
+  background-size: 12px 7px;
+  background-color: #dbdbdb;
+  left: 2px;
+  top: -2px;
+  display: block;
+}
+.filter-form__checkbox-label:hover::before {
+  background-color: #cecece;
+}
+.filter-form__checkbox-label:active::before {
+  background-color: #c4c4c4;
+}
+.filter-form__radio-label {
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.filter-form__radio-label::before {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #c6c6c6;
+  left: 1px;
+  top: -1px;
+}
+.filter-form__radio-label:hover:before {
+  border: 2px solid #bebebe;
+}
+.filter-form__radio-label:active:before {
+  border: 2px solid #acacac;
+}
+.filter-form__radio-label::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  left: 8px;
+  top: 6px;
 }
 .filter-form__section {
   display: -webkit-box;
@@ -2008,7 +2243,8 @@ a {
 .filter-form__section--checkbox {
   margin-top: 17px;
 }
-.filter-form__section--checkbox input {
+.filter-form__section--checkbox input,
+.filter-form__section--radio input {
   display: none;
 }
 .filter__section-name {
@@ -2025,7 +2261,7 @@ a {
   display: inline-block;
   height: 2px;
   width: 204px;
-  background-color: #f10d0d;
+  background-color: #dbdbdb;
   margin-top: 69px;
   margin-left: 1px;
 }
@@ -2034,6 +2270,8 @@ a {
   font-family: "Gilroy Light";
   margin-left: 2px;
   margin-top: -1px;
+  color: #000;
+  opacity: 0.2;
 }
 .filter__price--max {
   margin-top: -43px;
@@ -2045,6 +2283,7 @@ a {
   border-radius: 50%;
   border: 2px solid #000;
   background-color: #fff;
+  cursor: pointer;
 }
 .toggle__price--min {
   margin-left: 1px;
@@ -2054,28 +2293,27 @@ a {
   margin-left: 113px;
   margin-top: -14px;
 }
+.toggle__price:active {
+  border: 2px solid #fff;
+  background-color: #7eae29;
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75);
+}
 .section--checkbox__wrapper {
   margin-top: 56px;
+  margin-bottom: 27px;
 }
 .checkbox__element-wrapper {
   padding-bottom: 9px;
-  position: relative;
 }
-.checkbox__element-wrapper::before {
-  position: absolute;
-  content: "";
-  width: 23px;
-  height: 23px;
-  background-repeat: no-repeat;
-  background-position: 5px 8px;
-  background-size: 12px 7px;
-  background-color: #dad;
-  left: 2px;
-  top: 4px;
-  display: block;
+.radio__element-wrapper {
+  padding-bottom: 10px;
 }
-/*.checkbox__element-wrapper::before  input[type=checkbox]:checked {
-    background-image: url(../img/tick.svg);
-    //color: #333;
+.radio__element-wrapper--first {
+  margin-top: 56px;
 }
-*/
+input[type=checkbox]:checked + .filter-form__checkbox-label::before {
+  background-image: url("../img/tick.svg");
+}
+input[type=radio]:checked + .filter-form__radio-label::after {
+  border: 2px solid #000;
+}

@@ -137,47 +137,76 @@
                             </fieldset>
                             <fieldset class="filter-form__section  filter-form__section--radio">
                                 <legend class="filter__section-name">Bluetooth</legend>
-                                <div class="radio__element-wrapper">
+                                <div class="radio__element-wrapper  radio__element-wrapper--first">
                                     <input id="yes" name="availability" type="radio" value="yes" checked>
-                                    <label class="filter-form_radio-label" for="yes">Есть</label>
+                                    <label class="filter-form__radio-label" for="yes">Есть</label>
                                 </div>
                                 <div class="radio__element-wrapper">
-                                    <input id="yes" name="availability" type="radio" value="yes">
-                                    <label class="filter-form_radio-label" for="yes">Нет</label>
+                                    <input id="no" name="availability" type="radio" value="no">
+                                    <label class="filter-form__radio-label" for="no">Нет</label>
                                 </div>
                             </fieldset>
-                            <button class="btn  btn--yellow btn--form"><b>Показать</b></button>
+                            <button class="btn  btn--yellow  btn--form"><b>Показать</b></button>
                         </form>
                     </div>
 
                     <div class="catalog__items">
                         <div class="catalog__items-wrapper">
                             <div class="item__wrapper">
-                                <div class="item__image"></div>
+                                <div class="item__image">
+                                    <img class="item__img" srcset="img/item-1.png 1x, img/item-1@2x.png 2x" alt="item-1">
+                                    
+                                </div>
                                 <div class="item__description">
                                     <p class="description__name">Любительская селфи-палка</p>
-                                    <p class="description__price">500 р.</p>
+                                    <p class="description__price">500 руб.</p>
+                                </div>
+                                <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
                                 </div>
                             </div>
                             <div class="item__wrapper">
-                                <div class="item__image"></div>
+                                <div class="item__image">
+                                    <img class="item__img" srcset="img/item-2.png 1x, img/item-2@2x.png 2x" alt="item-2">                                   
+                                    <div class="item__img-hover-menu">
+                                            <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                            <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                    </div>
+                                </div>
                                 <div class="item__description">
-                                    <p class="description__name">Профессиональная селфи-палка</p>
-                                    <p class="description__price">1 500 р.</p>
+                                    <p class="description__name">Профессиональная<br> селфи-палка</p>
+                                    <p class="description__price">1 500 руб.</p>
                                 </div>
+                                <!--<div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                </div>-->
                             </div>
                             <div class="item__wrapper">
-                                <div class="item__image"></div>
+                                <div class="item__image">
+                                    <img class="item__img" srcset="img/item-3.png 1x, img/item-3@2x.png 2x" alt="item-3">
+                                </div>
                                 <div class="item__description">
                                     <p class="description__name">Непотопляемая селфи-палка</p>
-                                    <p class="description__price">2 500 р.</p>
+                                    <p class="description__price">2 500 руб.</p>
+                                </div>
+                                <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
                                 </div>
                             </div>
                             <div class="item__wrapper">
-                                <div class="item__image  item__image--new"></div>
+                                <div class="item__image  item__image--new">
+                                    <img class="item__img" srcset="img/item-4.png 1x, img/item-4@2x.png 2x" alt="item-4">
+                                </div>
                                 <div class="item__description">
-                                    <p class="description__name">Селфи палка "Следуй за мной"</p>
-                                    <p class="description__price">4 900 р.</p>
+                                    <p class="description__name">Селфи-палка «Следуй за<br> мной»</p>
+                                    <p class="description__price">4 900 руб.</p>
+                                </div>
+                                <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
                                 </div>
                             </div>
                         </div>
@@ -186,9 +215,9 @@
                                 <b class="items-pages__block-page  items-pages__block-page--active">Назад</b>
                             </div>
                             <div class="items-pages__block  items-pages__center">
-                                <b class="items-pages__block-page  items-pages__block-page--active">1</b>
-                                <b class="items-pages__block-page">2</b>
-                                <b class="items-pages__block-page">3</b>
+                                <b class="items-pages__block-page  items-pages__block-page--number  items-pages__block-page--active">1</b>
+                                <b class="items-pages__block-page  items-pages__block-page--number">2</b>
+                                <b class="items-pages__block-page  items-pages__block-page--number">3</b>
                             </div>
                             <div class="items-pages__block  items-pages__right">
                                 <b class="items-pages__block-page  items-pages__block-page--active">Вперед</b>
