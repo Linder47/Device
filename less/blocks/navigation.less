@@ -161,16 +161,17 @@
     padding-right: 0;
     background-color: @color-yellow;
 
-    .btn-search {
-        display: none;
-    }
-
     &:active,
     &:focus {
     outline: 0;
     border: none;
     border-bottom: 2px solid #000;
     }
+}
+
+#search:active ~ .btn-search,
+#search:focus ~ .btn-search {
+    visibility: visible;
 }
 
 .navigation__item--login  {

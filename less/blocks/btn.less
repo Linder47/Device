@@ -26,13 +26,12 @@
     cursor: pointer;
 
     &:hover {
-        display: inline-block;
+        visibility: visible;
         background-color: #000;
         color: #fff;
     }
 
     &:active {
-        display: inline-block;
         color: #4d4d4d;
     }
 }
@@ -69,13 +68,14 @@
         top: 16px;
         left: -0px;
         z-index: 2;
+        transition: height .3s ease-out 0ms,
+        margin-top .3s ease-out 0ms;
     }
 
     &:hover::after {
         width: 260px;
         height: 40px;
         margin-top: -16px;
-        transition: height .5s ease-out 0ms;
         outline: none;
     }
 

@@ -96,8 +96,8 @@
 
             <div class="catalog__filter-and-items">
                 <div class="filter-and-items-color__wrapper">
-                        <div class="catalog__filter-color"></div>
-                        <div class="catalog__items-color"></div>
+                    <div class="catalog__filter-color"></div>
+                    <div class="catalog__items-color"></div>
                 </div>
                 <div class="filter-and-items-content__wrapper  catalog-container">
                     <div class="catalog__filter">
@@ -105,6 +105,7 @@
                             <fieldset class="filter-form__section  filter-form__section--price-line">
                                 <legend class="filter__section-name">Стоимость</legend>
                                 <div class="filter__price-line"></div>
+                                <div class="filter__price-line-green"></div>
                                 <div class="toggle__price  toggle__price--min"></div>
                                 <div class="toggle__price  toggle__price--max"></div>
                                 <p class="filter__price  filter__price--min">от 0</p>
@@ -154,59 +155,55 @@
                         <div class="catalog__items-wrapper">
                             <div class="item__wrapper">
                                 <div class="item__image">
+                                    <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                    </div>
                                     <img class="item__img" srcset="img/item-1.png 1x, img/item-1@2x.png 2x" alt="item-1">
-                                    
                                 </div>
                                 <div class="item__description">
                                     <p class="description__name">Любительская селфи-палка</p>
                                     <p class="description__price">500 руб.</p>
                                 </div>
-                                <div class="item__img-hover-menu">
-                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
-                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
-                                </div>
                             </div>
                             <div class="item__wrapper">
                                 <div class="item__image">
-                                    <img class="item__img" srcset="img/item-2.png 1x, img/item-2@2x.png 2x" alt="item-2">                                   
                                     <div class="item__img-hover-menu">
-                                            <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
-                                            <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
                                     </div>
+                                    <img class="item__img" srcset="img/item-2.png 1x, img/item-2@2x.png 2x" alt="item-2">
                                 </div>
                                 <div class="item__description">
                                     <p class="description__name">Профессиональная<br> селфи-палка</p>
                                     <p class="description__price">1 500 руб.</p>
                                 </div>
-                                <!--<div class="item__img-hover-menu">
-                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
-                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
-                                </div>-->
                             </div>
                             <div class="item__wrapper">
                                 <div class="item__image">
+                                    <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                    </div>
                                     <img class="item__img" srcset="img/item-3.png 1x, img/item-3@2x.png 2x" alt="item-3">
                                 </div>
                                 <div class="item__description">
                                     <p class="description__name">Непотопляемая селфи-палка</p>
                                     <p class="description__price">2 500 руб.</p>
                                 </div>
-                                <div class="item__img-hover-menu">
-                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
-                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
-                                </div>
+
                             </div>
                             <div class="item__wrapper">
                                 <div class="item__image  item__image--new">
+                                    <div class="item__img-hover-menu">
+                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
+                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
+                                    </div>
                                     <img class="item__img" srcset="img/item-4.png 1x, img/item-4@2x.png 2x" alt="item-4">
                                 </div>
                                 <div class="item__description">
                                     <p class="description__name">Селфи-палка «Следуй за<br> мной»</p>
                                     <p class="description__price">4 900 руб.</p>
-                                </div>
-                                <div class="item__img-hover-menu">
-                                        <button class="btn  btn--yellow  btn--image"><b>В корзину</b></button>
-                                        <p class="img-hover-menu__text">Добавить к сравнению</p>
                                 </div>
                             </div>
                         </div>
@@ -228,12 +225,12 @@
             </div>
         </div>
 
-        <footer class="page-footer">
+        <footer class="page-footer  page-footer--catalog">
             <div class="page-footer__wrapper  container">
                 <div class="logo-navigation__wrapper">
                     <div class="logo__wrapper">
                         <a class="logo" href="index.html">
-                            <h1 class="logo__text  logo__text--page-footer">DEVICE</h1>
+                            <h1 class="logo__text  logo__text--page-footer  logo__text--catalog">DEVICE</h1>
                         </a>
                     </div>
                     <div class="navigation  navigation--page-footer">
@@ -244,7 +241,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main-nav__wrapper">
+                <div class="main-nav__wrapper  main-nav__wrapper--catalog">
                     <p class="page-footer__main-nav-text">г. Москва, ул. Строителей, 15</p>
                     <nav class="main-nav  main-nav--page-footer">
                         <ul class="main-nav__list  main-nav__list--page-footer">
